@@ -1,0 +1,31 @@
+-- require('avante_lib').load()
+-- require('avante').setup ({
+--     --@alias Provider "openai"--
+--   -- Your config here!
+--   -- provider = "openai",
+--   -- openai = {
+--   --     endpoint = "https://api.openai.com/v1/",
+--   --     model = "gpt-4o-mini",
+--   --     temperature = 0,
+--   --     max_tokens = 4096,
+--   -- },
+
+-- -- })
+--     provider = "openrouter",
+--     vendors = {
+--         openrouter = {
+--             __inherited_from = 'openai',
+--             endpoint = 'https://openrouter.ai/api/v1',
+--             api_key_name = 'OPENROUTER_API_KEY',
+--             -- model = 'deepseek/deepseek-r1-0528'
+--             -- model = "x-ai/grok-3-mini"
+--             model = "google/gemini-2.5-flash-preview-05-20"
+--             -- model = "moonshotai/kimi-dev-72b:free"
+--             -- model
+--             -- model = 'anthropic/claude-sonnet-4'
+--             -- model = 'meta-llama/llama-4-maverick',
+--             -- model = 'openrouter/optimus-alpha'
+--             -- model = 'google/gemini-2.5-pro-exp-05-25:free',
+--         },
+--     }
+-- })
