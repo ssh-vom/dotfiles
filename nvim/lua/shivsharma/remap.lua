@@ -25,21 +25,28 @@ vim.keymap.set('n', '<Leader>N', '<Plug>(doge-generate)')
 vim.keymap.set('n', '<leader>P', ':PasteImage<CR>')
 
 vim.keymap.set('n', '<leader>qf', function()
-  local is_qf_open = false
-  for _, win in ipairs(vim.fn.getwininfo()) do
-    if win.quickfix == 1 then
-      is_qf_open = true
-      break
+    local is_qf_open = false
+    for _, win in ipairs(vim.fn.getwininfo()) do
+        if win.quickfix == 1 then
+            is_qf_open = true
+            break
+        end
     end
-  end
 
-  if is_qf_open then
-    vim.cmd('cclose')
-  else
-    vim.cmd('copen')
-  end
+    if is_qf_open then
+        vim.cmd('cclose')
+    else
+        vim.cmd('copen')
+    end
 end, { desc = "Toggle Quickfix Window" })
 
 local opts = { noremap = true, silent = true }
--- vim.keymap.set("n", '<Leader>N', ":lua require('neogen').generate()<CR>", opts)
 
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "c", "cpp", "python" },
+    callback = function()
+        vim.opt_local.makeprg = "make CURFILE=%:p"
+    end,
+})
+
+-- vim.keymap.set("n", '<Leader>N', ":lua require('neogen').generate()<CR>", opts)
