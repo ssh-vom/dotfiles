@@ -1,0 +1,49 @@
+local M = {}
+--
+--
+-- M.setup = function()
+--
+-- end
+--
+--
+--
+-- local parse_slides = function(lines)
+--     local slides = { slides = {} }
+--     local current_slide = {}
+--     local separator = "^#"
+--
+--     for _, line in ipairs(lines) do
+--         print(line, "find:", line:find(separator), "|")
+--         if line:find(separator) then
+--             if #current_slide > 0 then
+--                 table.insert(slides.slides, current_slide)
+--             end
+--             current_slide = {}
+--         end
+--         table.insert(current_slide, line)
+--     end
+--     table.insert(slides.slide, current_slide)
+--     return slides
+-- end
+--
+-- M.start_presentation = function()
+--     opts = opts or {}
+--     opts.bufnr = opts.bufnr or 0
+--     local lines = vim.api.nvim_buf_get_lines(0, 0 - 1, false)
+--     local parsed = parse_slides(lines)
+--     local float = create_floating_window()
+--     vim.api.nvim_buf_set_lines(float.buf, 0, -1, false, parsed.slides[1])
+-- end
+--
+-- parse_slides({
+--     "# Hello",
+--     "## Test Title",
+--     [[```python3
+--     def main():
+--         print("Hello")
+--         return
+--     ```
+--     ]]
+-- })
+--
+return M

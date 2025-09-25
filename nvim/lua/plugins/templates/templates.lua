@@ -15,7 +15,7 @@ local templates = {
 }
 
 local function insert_template(name)
-    local template = M.templates[name]
+    local template = templates[name]
     if not template then
         vim.notify("Template not found")
         return
@@ -28,10 +28,16 @@ vim.api.nvim_create_user_command("Template", function(opts)
 end, {
     nargs = 1,
     complete = function(ArgLead)
-        return vim.tbl_filter(function(template)
-            return template:match("^" .. ArgLead)
-        end, templates)
+        local keys = {}
+        for k in pairs(templates) do
+            table.insert(keys, k)
+        end
+        return vim.tbl_filter(function(t)
+            return t:match("^" .. ArgLead)
+        end, keys)
     end,
 })
+
+
 
 return M
