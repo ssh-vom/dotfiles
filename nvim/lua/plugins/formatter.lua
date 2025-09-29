@@ -8,7 +8,7 @@ return {
             python = { "ruff_format", "ruff" },
             javascript = { "prettier" },
             typescript = { "prettier" },
-            latex = { "tex-fmt" },
+            latex = { "latexindent" },
             typst = { "typstfmt" },
             cpp = { "clang-format" },
         },
