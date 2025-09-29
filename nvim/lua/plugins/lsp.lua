@@ -29,51 +29,46 @@ return {
         lazy = false,
         config = function()
             local capabilities = require('blink.cmp').get_lsp_capabilities()
+            -- vim.lsp.config()
+            local lsp = require('lspconfig')
 
-            require('mason-lspconfig').setup({
-                function(server_name)
-                    require('lspconfig')[server_name].setup({
-                        capabilities = capabilities,
-                    })
-                end,
-
-                ['lua_ls'] = function()
-                    require('lspconfig').lua_ls.setup({
-                        capabilities = capabilities,
-                        settings = {
-                            Lua = {
-                                runtime = { version = 'LuaJIT' },
-                                diagnostics = { globals = { 'vim' } },
-                                workspace = {
-                                    library = vim.api.nvim_get_runtime_file("", true),
-                                },
-                                telemetry = { enable = false },
-                            },
+            -- Lua
+            lsp.lua_ls.setup({
+                capabilities = capabilities,
+                settings = {
+                    Lua = {
+                        runtime = { version = 'LuaJIT' },
+                        diagnostics = { globals = { 'vim' } },
+                        workspace = {
+                            library = vim.api.nvim_get_runtime_file("", true),
                         },
-                    })
-                end,
+                        telemetry = { enable = false },
+                    },
+                },
+            })
 
-                ['basedpyright'] = function()
-                    require('lspconfig').basedpyright.setup({
-                        capabilities = capabilities,
-                        settings = {
-                            basedpyright = {
-                                analysis = {
-                                    autoImportCompletions = false,
-                                    indexing = { enabled = false },
-                                    useLibraryCodeForTypes = true,
-                                    diagnosticMode = "openFilesOnly",
-                                },
-                            },
+            -- Python: basedpyright
+            lsp.basedpyright.setup({
+                capabilities = capabilities,
+                settings = {
+                    basedpyright = {
+                        analysis = {
+                            autoImportCompletions = false,
+                            indexing = { enabled = false },
+                            useLibraryCodeForTypes = true,
+                            diagnosticMode = "openFilesOnly",
                         },
-                    })
-                end,
+                    },
+                },
+            })
 
-                ['ruff'] = function()
-                    require('lspconfig').ruff.setup({
-                        capabilities = capabilities,
-                    })
-                end,
+            lsp.ruff.setup({
+                capabilities = capabilities,
+                init_options = {
+                    settings = {
+                        args = {},
+                    },
+                },
             })
         end,
     },
