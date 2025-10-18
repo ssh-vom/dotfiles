@@ -29,11 +29,9 @@ return {
         lazy = false,
         config = function()
             local capabilities = require('blink.cmp').get_lsp_capabilities()
-            -- vim.lsp.config()
-            local lsp = require('lspconfig')
 
             -- Lua
-            lsp.lua_ls.setup({
+            vim.lsp.config("lua_ls", {
                 capabilities = capabilities,
                 settings = {
                     Lua = {
@@ -48,7 +46,7 @@ return {
             })
 
             -- Python: basedpyright
-            lsp.basedpyright.setup({
+            vim.lsp.config("basedpyright", {
                 capabilities = capabilities,
                 settings = {
                     basedpyright = {
@@ -62,7 +60,7 @@ return {
                 },
             })
 
-            lsp.ruff.setup({
+            vim.lsp.config("ruff", {
                 capabilities = capabilities,
                 init_options = {
                     settings = {

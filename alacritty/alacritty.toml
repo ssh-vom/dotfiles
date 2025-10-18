@@ -1,0 +1,41 @@
+[window]
+padding.x = 8
+padding.y = 8
+opacity = 0.95
+decorations = "none"
+dynamic_padding = true
+startup_mode = "Maximized"
+
+[font]
+size = 14.0
+
+[font.normal]
+family = "Jetbrains Mono"
+# style = "Regular"
+
+# ─────────────────────────────
+# 🖌️ Colors (Tokyo Night Storm inspired)
+# ─────────────────────────────
+[colors.primary]
+background = "0x1a1b26"
+foreground = "0xc0caf5"
+
+[colors.normal]
+black = "0x1a1b26"
+red = "0xf7768e"
+green = "0x9ece6a"
+yellow = "0xe0af68"
+blue = "0x7aa2f7"
+magenta = "0xbb9af7"
+cyan = "0x7dcfff"
+white = "0xa9b1d6"
+
+[colors.bright]
+black = "0x414868"
+red = "0xf7768e"
+green = "0x9ece6a"
+yellow = "0xe0af68"
+blue = "0x7aa2f7"
+magenta = "0xbb9af7"
+cyan = "0x7dcfff"
+white = "0xc0caf5"
