@@ -8,7 +8,8 @@ return {
         })
 
         -- local color = "vague"
-        local color = "solarized"
+        -- local color = "adwaita"
+        -- local color = "solarized"
 
         -- color = "industry"
         -- color = color or "rose-pine"
@@ -22,12 +23,13 @@ return {
         -- color = color or "dracula"
         -- color = color or "catppuccin"
         -- color = color or "gruvbox"
-        -- color = color or "vague"
-
+        color = color or "vague"
         -- color = color or 'lunaperche'
         -- color = color or "base16-black-metal-dark-funeral"
         -- color = color or 'kanagawa-dragon'
         -- color = color or 'mellifluous'
+        -- color = color or "gruber-darker"
+
         -- color = color or 'koehler'
         -- color = color or 'modus'
         -- color = color or 'abscs'
@@ -35,8 +37,9 @@ return {
 
         vim.cmd.colorscheme(color)
 
+
         vim.api.nvim_set_hl(1, "Normal", { bg = "none" })
         vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-        -- vim.o.background = "dark"
+        vim.o.background = "dark"
     end,
 }
