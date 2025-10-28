@@ -7,11 +7,11 @@ dynamic_padding = true
 startup_mode = "Maximized"
 
 [font]
-size = 14.0
+size = 28.0
 
 [font.normal]
-family = "Jetbrains Mono"
-# style = "Regular"
+family = "Iosevka Nerd Font"
+style = "Regular"
 
 # ─────────────────────────────
 # 🖌️ Colors (Tokyo Night Storm inspired)
