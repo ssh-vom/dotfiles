@@ -49,4 +49,3 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
--- vim.keymap.set("n", '<Leader>N', ":lua require('neogen').generate()<CR>", opts)

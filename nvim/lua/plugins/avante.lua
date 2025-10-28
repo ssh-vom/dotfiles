@@ -23,8 +23,8 @@ return {
                     endpoint = 'https://openrouter.ai/api/v1',
                     api_key_name = 'OPENROUTER_API_KEY',
                     -- model = "openrouter/sonoma-sky-alpha"
-                    model = "x-ai/grok-4-fast:free"
-                    -- model = 'deepseek/deepseek-r1-0528'
+                    -- model = "x-ai/grok-4-fast:free"
+                    model = 'deepseek/deepseek-r1-0528'
                     -- model = "x-ai/grok-3-mini"
                     -- model="openrouter/horizon-alpha"
                     -- model="openai/gpt-oss-120b"
