@@ -13,14 +13,16 @@ return {
     { 'MeanderingProgrammer/render-markdown.nvim' },
     { 'hrsh7th/nvim-cmp' },
     { 'nvim-tree/nvim-web-devicons' },
-    { 'HakonHarnes/img-clip.nvim' },
+    {
+        lazy = false,
+        'HakonHarnes/img-clip.nvim',
+    },
     { 'zbirenbaum/copilot.lua' },
     { 'stevearc/dressing.nvim' },
     { 'folke/snacks.nvim' },
     { 'nvim-neorg/lua-utils.nvim' },
     { 'pysan3/pathlib.nvim' },
     { 'nvim-neotest/nvim-nio' },
-    { "ellisonleao/gruvbox.nvim" },
     { "tiagovla/tokyodark.nvim" },
     { 'nvim-treesitter/nvim-treesitter' },
     {
@@ -86,13 +88,6 @@ return {
         end
     },
     {
-        'nvim-lualine/lualine.nvim',
-        dependencies = { 'nvim-tree/nvim-web-devicons', lazy = true },
-        config = function()
-            require('lualine').setup()
-        end
-    },
-    {
         "giusgad/pets.nvim",
         dependencies = {
             "giusgad/hologram.nvim",
@@ -102,16 +97,7 @@ return {
             require('pets').setup()
         end
     },
-    {
-        'fpeterek/nvim-surfers',
-        config = function()
-            require('nvim-surfers').setup({
-                _tmux = true,
-            })
-        end
-    },
     { 'ThePrimeagen/vim-be-good' },
-    { 'slugbyte/lackluster.nvim' },
     { "xero/miasma.nvim" },
     { 'RRethy/nvim-base16' },
     -- {
@@ -121,8 +107,6 @@ return {
     --     end
     -- },
     { "kiyoon/magick.nvim" },
-    { "thesimonho/kanagawa-paper.nvim" },
-    { "rebelot/kanagawa.nvim" },
     { "miikanissi/modus-themes.nvim" },
     { 'NTBBloodbath/sweetie.nvim' },
     { 'Abstract-IDE/Abstract-cs' },
@@ -173,16 +157,7 @@ return {
         end
     },
     { "blazkowolf/gruber-darker.nvim" },
-    -- {
-    --     'maxmx03/solarized.nvim',
-    --     lazy = false,
-    --     priority = 1000,
-    --     opts = {},
-    --     config = function(_, opts)
-    --         vim.o.termguicolors = true
-    --         vim.o.background = 'dark'
-    --         require('solarized').setup(opts)
-    --         vim.cmd.colorscheme 'solarized'
-    --     end,
-    -- }
+    {
+        "fcpg/vim-fahrenheit" },
+
 }
