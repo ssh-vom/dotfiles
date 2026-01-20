@@ -73,7 +73,7 @@ return {
 
         -- Setup mason-nvim-dap to automatically install adapters
         require("mason-nvim-dap").setup({
-            ensure_installed = { "python", "cpptools" }, -- Add your languages here
+            ensure_installed = { "python", "codelldb" },
             automatic_installation = true,
         })
 
