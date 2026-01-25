@@ -1,0 +1,51 @@
+theme = "gruvbox"
+
+[editor]
+auto-completion = true
+bufferline = "multiple"
+completion-trigger-len = 2
+line-number = "absolute"
+mouse = false
+
+[editor.auto-save]
+focus-lost = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+other-lines = "error"
+
+[editor.lsp]
+display-inlay-hints = true
+
+[editor.soft-wrap]
+enable = true
+
+[editor.statusline]
+center = ["file-name"]
+left = ["mode", "spinner"]
+right = [
+    "diagnostics",
+    "selections",
+    "position",
+    "file-encoding",
+    "file-line-ending",
+    "file-type",
+]
+separator = "│"
+
+[editor.statusline.mode]
+insert = "INSERT"
+normal = "NORMAL"
+select = "SELECT"
+
+[keys.insert]
+esc = ["collapse_selection", "normal_mode"]
+
