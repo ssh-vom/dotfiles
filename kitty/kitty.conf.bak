@@ -25,7 +25,7 @@ include ./theme.conf
 #:     italic_font      Operator Mono Book Italic
 #:     bold_italic_font Operator Mono Medium Italic
 
-# font_size 11.0
+font_size 20.0
 
 #: Font size (in pts).
 
@@ -886,7 +886,7 @@ include ./theme.conf
 #: Fade the text in inactive windows by the specified amount (a number
 #: between zero and one, with zero being fully faded).
 
-# hide_window_decorations no
+hide_window_decorations yes
 
 #: Hide the window decorations (title-bar and window borders) with
 #: yes. On macOS, titlebar-only and titlebar-and-corners can be used
@@ -2511,7 +2511,7 @@ dynamic_background_opacity yes
 
 
 # BEGIN_KITTY_FONTS
-font_family      family="Fira Code"
+font_family      family="Fantasque Sans Mono"
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
