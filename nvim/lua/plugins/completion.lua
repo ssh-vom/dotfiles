@@ -10,13 +10,13 @@ return {
 			nerd_font_variant = "mono",
 		},
 		completion = {
-			menu = { border = "rounded" },
-			documentation = { window = { border = "rounded" } },
+			menu = { border = "single" },
+			documentation = { window = { border = "single" } },
 		},
-		signature = { enabled = true, window = { border = "rounded" } },
+		signature = { enabled = true, window = { border = "single" } },
 	},
 	snippets = {
 		enabled = true,
-		window = { border = "rounded" },
+		window = { border = "single" },
 	},
 }

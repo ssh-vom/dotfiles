@@ -9,10 +9,10 @@ return {
 			custom_highlights = {},
 			wal = false,
 		})
-		vim.cmd.colorscheme("neopywal")
-		-- vim.cmd.colorscheme("gruvbox");
-		vim.api.nvim_set_hl(1, "Normal", { bg = "none" })
-		vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+		-- vim.cmd.colorscheme("neopywal")
+		vim.cmd.colorscheme("gruvbox")
+		-- vim.api.nvim_set_hl(1, "Normal", { bg = "none" })
+		-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 		vim.o.background = "dark"
 	end,
 	-- require("vague").setup({
