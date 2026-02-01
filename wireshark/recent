@@ -95,7 +95,7 @@ gui.show_bytes_show: ASCII
 
 # Main window upper (or leftmost) pane size.
 # Decimal number.
-gui.geometry_main_upper_pane: 467
+gui.geometry_main_upper_pane: 470
 
 # Main window middle pane size.
 # Decimal number.
@@ -108,6 +108,10 @@ gui.geometry_main_master_split: 000000ff0000000100000002000000e3000000e300ffffff
 # Main window extra splitter state.
 # Hex byte string.
 gui.geometry_main_extra_split: 000000ff0000000100000002000001730000017400ffffffff010000000100
+
+# Splitter state of PacketDialog window.
+# Qt Splitter state (hex byte string).
+gui.geom.PacketDialog.splitter: 000000ff0000000100000002000000c0000000cb01ffffffff010000000200
 
 # Packet list column pixel widths.
 # Each pair of strings consists of a column format and its pixel width.

@@ -10,7 +10,10 @@ return {
 			wal = false,
 		})
 		-- vim.cmd.colorscheme("neopywal")
-		vim.cmd.colorscheme("gruvbox")
+		-- vim.cmd.colorscheme("mellifluous")
+		-- vim.cmd.colorscheme("base2tone_desert_dark")
+		-- vim.cmd.colorscheme("scholar")
+		vim.cmd.colorscheme("flexoki")
 		-- vim.api.nvim_set_hl(1, "Normal", { bg = "none" })
 		-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 		vim.o.background = "dark"

@@ -12,18 +12,18 @@
 
 ######## Recent display filters (latest last), cannot be altered through command line ########
 
+recent.display_filter: http
 recent.display_filter: http && ip.addr == 130.113.68.10
 recent.display_filter: http and ip.addr == 130.113.68.10
-recent.display_filter: http
 recent.display_filter: http2
 recent.display_filter: http3
 
 # Main window geometry.
 # Decimal numbers.
-gui.geometry_main_x: 298
-gui.geometry_main_y: 48
+gui.geometry_main_x: 868
+gui.geometry_main_y: 43
 gui.geometry_main_width: 684
-gui.geometry_main_height: 1030
+gui.geometry_main_height: 1035
 
 # Main window maximized.
 # true or false (case-insensitive).
@@ -31,7 +31,7 @@ gui.geometry_main_maximized: false
 
 # Main window geometry state.
 # Hex byte string.
-gui.geometry_main: 01d9d0cb000300000000012a00000030000003d5000004510000012a0000004c000003d500000451000000000000000006c00000012a0000004c000003d500000451
+gui.geometry_main: 01d9d0cb00030000000003640000002b0000060f0000045100000364000000470000060f00000451000000000000000006c000000364000000470000060f00000451
 
 # Leftalign Action Buttons.
 # true or false (case-insensitive).
@@ -86,6 +86,28 @@ gui.geom.ExpertInfoDialog.height: 1030
 gui.geom.ExpertInfoDialog.maximized: false
 # Qt Geometry State (hex byte string).
 gui.geom.ExpertInfoDialog.qt_geometry: 01d9d0cb000300000000037a00000026000005e5000004470000037a00000042000005e500000447000000000000000006c00000037a00000042000005e500000447
+
+# Geometry and maximized state of PacketDialog window.
+# Decimal integers.
+gui.geom.PacketDialog.x: 171
+gui.geom.PacketDialog.y: 135
+gui.geom.PacketDialog.width: 1366
+gui.geom.PacketDialog.height: 828
+# true or false (case-insensitive).
+gui.geom.PacketDialog.maximized: false
+# Qt Geometry State (hex byte string).
+gui.geom.PacketDialog.qt_geometry: 01d9d0cb00030000000000ab0000008700000600000003de000000ab000000a300000600000003de000000000000000006c0000000ab000000a300000600000003de
+
+# Geometry and maximized state of ShowPacketBytesDialog window.
+# Decimal integers.
+gui.geom.ShowPacketBytesDialog.x: 285
+gui.geom.ShowPacketBytesDialog.y: 161
+gui.geom.ShowPacketBytesDialog.width: 1138
+gui.geom.ShowPacketBytesDialog.height: 777
+# true or false (case-insensitive).
+gui.geom.ShowPacketBytesDialog.maximized: false
+# Qt Geometry State (hex byte string).
+gui.geom.ShowPacketBytesDialog.qt_geometry: 01d9d0cb000300000000011d000000a10000058e000003c50000011d000000bd0000058e000003c5000000000000000006c00000011d000000bd0000058e000003c5
 
 # Custom colors.
 # List of custom colors selected in Qt color picker.
