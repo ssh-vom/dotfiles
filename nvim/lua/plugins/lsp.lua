@@ -1,16 +1,16 @@
 return {
 	{
 		"williamboman/mason.nvim",
+		cmd = "Mason",
 		config = true,
-		lazy = true,
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
 		dependencies = { "mason.nvim" },
+		event = { "BufReadPre", "BufNewFile" },
 		opts = {
 			ensure_installed = { "lua_ls", "basedpyright", "ruff" },
 		},
-		lazy = false,
 	},
 	{
 		"neovim/nvim-lspconfig",
@@ -26,7 +26,7 @@ return {
 				},
 			},
 		},
-		lazy = false,
+		event = { "BufReadPre", "BufNewFile" },
 		config = function()
 			-- Subtle diagnostic display (Helix-style: minimal but visible)
 			vim.diagnostic.config({

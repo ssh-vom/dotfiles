@@ -4,6 +4,7 @@ return {
 	dependencies = { "rafamadriz/friendly-snippets" },
 	-- use a release tag to download pre-built binaries
 	version = "1.*",
+	event = "InsertEnter",
 	opts = {
 		keymap = { preset = "default" },
 		appearance = {

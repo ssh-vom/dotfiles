@@ -1,7 +1,7 @@
 local path = vim.fn.stdpath("config") .. "/lua/plugins/templates/"
 return {
     "local-templates",
-    lazy = false,
+    cmd = "Template",
     dir = path,
     config = function()
         local path = vim.fn.stdpath("config") .. "/lua/plugins/templates/"

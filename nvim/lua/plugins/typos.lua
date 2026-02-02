@@ -1,5 +1,5 @@
 return {
     'poljar/typos.nvim',
 
-    lazy = false,
+    event = "VeryLazy",
 }

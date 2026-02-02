@@ -2,7 +2,12 @@ return {
     {
         "ThePrimeagen/harpoon",
         dependencies = { "nvim-lua/plenary.nvim" },
-        lazy = false,
+        keys = {
+            "<leader>a",
+            "<C-e>a",
+            "<C-h>",
+            "<C-n>",
+        },
         config = function()
             local mark = require("harpoon.mark")
             local ui = require("harpoon.ui")

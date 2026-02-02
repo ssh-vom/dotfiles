@@ -1,5 +1,5 @@
 return {
     "basola21/PDFview",
-    lazy = false,
+    event = "VeryLazy",
     dependencies = { "nvim-telescope/telescope.nvim" }
 }
