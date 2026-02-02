@@ -1,6 +1,14 @@
 return {
-	lazy = false,
 	"NickvanDyke/opencode.nvim",
+	keys = {
+		{ "<C-a>", mode = { "n", "x" } },
+		{ "<C-x>", mode = { "n", "x" } },
+		{ "<C-.>", mode = { "n", "t" } },
+		{ "go", mode = { "n", "x" } },
+		{ "goo", mode = "n" },
+		{ "<S-C-u>", mode = "n" },
+		{ "<S-C-d>", mode = "n" },
+	},
 	dependencies = {
 		-- Recommended for `ask()` and `select()`.
 		-- Required for `snacks` provider.

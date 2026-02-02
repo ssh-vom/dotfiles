@@ -30,6 +30,7 @@ require("lazy").setup({
     -- install = { colorscheme = { "habamax" } },
     checker = { enabled = false },
     performance = {
+        cache = { enabled = true },
         rtp = {
             disabled_plugins = {
                 "gzip",

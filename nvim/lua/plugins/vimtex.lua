@@ -1,6 +1,6 @@
 return {
     "lervag/vimtex",
-    lazy=false,
+    ft = { "tex", "plaintex", "latex" },
 
     init = function()
         vim.g.vimtex_view_method = "skim"
