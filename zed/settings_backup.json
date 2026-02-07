@@ -7,18 +7,19 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  /* Duplicated key auto-commented: "agent": {
+  "agent": {
     "default_model": {
       "provider": "openrouter",
       "model": "x-ai/grok-4.1-fast"
     },
     "model_parameters": []
-  }, */
-  "agent": {
+  },
+  "assistant": {
     "default_model": {
       "provider": "openrouter",
       "model": "google/gemini-2.5-pro"
     },
+    "version": "2"
   },
   "vim_mode": true,
   "ui_font_size": 16,

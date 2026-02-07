@@ -30,9 +30,9 @@ if status is-interactive
     # set -Ux PYENV_ROOT $HOME/.pyenv
     # test -d $PYENV_ROOT/bin; and fish_add_path $PYENV_ROOT/bin
     # Starship prompt
-    if type -q starship
-        starship init fish | source
-    end
+    # if type -q starship
+    #     starship init fish | source
+    # end
 
     # Aliases
     alias vi nvim
