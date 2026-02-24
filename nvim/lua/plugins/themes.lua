@@ -40,4 +40,10 @@ return {
 	{ "atelierbram/Base2Tone-nvim" },
 	{ "abreujp/scholar.nvim" },
 	{ "cpplain/flexoki.nvim" },
+	{
+		"f4z3r/gruvbox-material.nvim",
+		name = "gruvbox-material",
+		lazy = false,
+		priority = 1000,
+	},
 }

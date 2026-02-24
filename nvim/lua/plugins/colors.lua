@@ -13,8 +13,16 @@ return {
 		-- vim.cmd.colorscheme("mellifluous")
 		-- vim.cmd.colorscheme("base2tone_desert_dark")
 		-- vim.cmd.colorscheme("scholar")
-		vim.cmd.colorscheme("flexoki")
+		-- vim.cmd.colorscheme("flexoki")
 		-- vim.api.nvim_set_hl(1, "Normal", { bg = "none" })
+		require("gruvbox-material").setup({
+			italics = true,
+			contrast = "medium",
+			comments = {
+				italics = true,
+			},
+		})
+		vim.cmd.colorscheme("gruvbox-material")
 		-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 		vim.o.background = "dark"
 	end,

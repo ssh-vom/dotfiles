@@ -9,7 +9,7 @@ return {
 		dependencies = { "mason.nvim" },
 		event = { "BufReadPre", "BufNewFile" },
 		opts = {
-			ensure_installed = { "lua_ls", "basedpyright", "ruff" },
+			ensure_installed = { "lua_ls", "basedpyright", "ruff", "matlab_ls" },
 		},
 	},
 	{
@@ -37,34 +37,34 @@ return {
 					source = false,
 					-- Only show for current line to reduce clutter
 					current_line = true,
-				format = function(diagnostic)
-					-- Wrap messages to fit within viewport
-					local message = diagnostic.message
-					local window_width = vim.api.nvim_win_get_width(0)
-					local col = vim.fn.col(".")
-					local available_width = window_width - col - 4
-					local max_width = math.min(80, math.max(40, available_width))
+					format = function(diagnostic)
+						-- Wrap messages to fit within viewport
+						local message = diagnostic.message
+						local window_width = vim.api.nvim_win_get_width(0)
+						local col = vim.fn.col(".")
+						local available_width = window_width - col - 4
+						local max_width = math.min(80, math.max(40, available_width))
 
-					if #message <= max_width then
-						return message
-					end
-
-					-- Wrap at word boundaries
-					local lines = {}
-					local current_line = ""
-
-					for word in message:gmatch("%S+") do
-						if #current_line + #word + 1 <= max_width then
-							current_line = current_line == "" and word or current_line .. " " .. word
-						else
-							table.insert(lines, current_line)
-							current_line = word
+						if #message <= max_width then
+							return message
 						end
-					end
-					table.insert(lines, current_line)
 
-					return table.concat(lines, "\n" .. string.rep(" ", 4))
-				end,
+						-- Wrap at word boundaries
+						local lines = {}
+						local current_line = ""
+
+						for word in message:gmatch("%S+") do
+							if #current_line + #word + 1 <= max_width then
+								current_line = current_line == "" and word or current_line .. " " .. word
+							else
+								table.insert(lines, current_line)
+								current_line = word
+							end
+						end
+						table.insert(lines, current_line)
+
+						return table.concat(lines, "\n" .. string.rep(" ", 4))
+					end,
 				},
 				signs = {
 					text = {
@@ -126,6 +126,11 @@ return {
 						telemetry = { enable = false },
 					},
 				},
+			})
+
+			-- MATLAB
+			vim.lsp.config("matlab_ls", {
+				capabilities = capabilities,
 			})
 
 			-- Python: basedpyright
