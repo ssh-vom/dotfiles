@@ -20,6 +20,7 @@ set -gx MANPAGER "nvim +Man!"
 set -gx OPENAI_API_KEY (cat ~/openai_key | string trim) 
 set -gx OPENROUTER_API_KEY (cat ~/openrouter_key | string trim) 
 set -Ux fish_user_paths $fish_user_paths /Users/shivom/Library/Python/3.14/bin/
+set -gx OPENCODE_EXPERIMENTAL_MARKDOWN true
 
 # set -gx PYENV_ROOT $HOME/.pyenv
 # set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths

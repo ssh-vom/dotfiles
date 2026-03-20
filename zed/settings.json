@@ -4,28 +4,245 @@
 // documentation: https://zed.dev/docs/configuring-zed
 //
 // To see all of Zed's default settings without changing your
-// custom settings, run the `open default settings` command
-// from the command palette or from `Zed` application menu.
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
 {
-  /* Duplicated key auto-commented: "agent": {
-    "default_model": {
-      "provider": "openrouter",
-      "model": "x-ai/grok-4.1-fast"
+  "base_keymap": "Emacs",
+  "calls": {
+    "share_on_join": false,
+    "mute_on_join": false,
+  },
+  "audio": {
+    "experimental.denoise": true,
+    "experimental.auto_speaker_volume": true,
+    "experimental.auto_microphone_volume": true,
+    "experimental.rodio_audio": true,
+  },
+  "vim_mode": false,
+  "agent_servers": {
+    "codex-acp": {
+      "type": "registry",
     },
-    "model_parameters": []
-  }, */
-  "agent": {
-    "default_model": {
-      "provider": "openrouter",
-      "model": "google/gemini-2.5-pro"
+    "gemini": {
+      "type": "registry",
+    },
+    "claude-acp": {
+      "type": "registry",
     },
   },
-  "vim_mode": true,
+  "language_models": {
+    "openai_compatible": {
+      "GroQ Kimi K2": {
+        "api_url": "https://api.groq.com/openai/v1",
+        "available_models": [
+          {
+            "name": "llama-3.3-70b-versatile",
+            "max_tokens": 262144,
+            "max_output_tokens": 16384,
+            "max_completion_tokens": 16384,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+            },
+          },
+          {
+            "name": "qwen/qwen3-32b",
+            "max_tokens": 262144,
+            "max_output_tokens": 16384,
+            "max_completion_tokens": 16384,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+            },
+          },
+          {
+            "name": "moonshotai/kimi-k2-instruct",
+            "max_tokens": 262144,
+            "max_output_tokens": 16384,
+            "max_completion_tokens": 16384,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+            },
+          },
+          {
+            "name": "moonshotai/kimi-k2-instruct-0905",
+            "max_tokens": 262144,
+            "max_output_tokens": 16384,
+            "max_completion_tokens": 16384,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+            },
+          },
+        ],
+      },
+    },
+  },
+  "git_panel": {
+    "sort_by_path": true,
+  },
+  "inlay_hints": {
+    "enabled": true,
+  },
+  "tab_size": 2,
+  "icon_theme": "Zed (Default)",
+  "agent": {
+    "tool_permissions": {
+      "default": "allow",
+    },
+    "profiles": {
+      "write": {
+        "name": "Write",
+        "tools": {
+          "copy_path": true,
+          "create_directory": true,
+          "delete_path": true,
+          "diagnostics": true,
+          "edit_file": true,
+          "fetch": true,
+          "list_directory": true,
+          "project_notifications": true,
+          "move_path": true,
+          "now": true,
+          "find_path": true,
+          "read_file": true,
+          "open": true,
+          "grep": true,
+          "terminal": true,
+          "thinking": true,
+          "web_search": true,
+        },
+        "enable_all_context_servers": true,
+        "context_servers": {},
+      },
+      "ask": {
+        "name": "Ask",
+        "tools": {
+          "diagnostics": true,
+          "fetch": true,
+          "list_directory": true,
+          "project_notifications": false,
+          "now": true,
+          "find_path": true,
+          "read_file": true,
+          "open": true,
+          "grep": true,
+          "thinking": true,
+          "web_search": true,
+          "terminal": true,
+        },
+        "enable_all_context_servers": false,
+        "context_servers": {},
+      },
+      "minimal": {
+        "name": "Minimal",
+        "tools": {
+          "copy_path": true,
+          "create_directory": true,
+          "delete_path": true,
+          "diagnostics": true,
+          "edit_file": true,
+          "fetch": true,
+          "find_path": true,
+          "grep": true,
+          "list_directory": true,
+          "move_path": true,
+          "now": true,
+          "open": true,
+          "project_notifications": true,
+          "read_file": true,
+          "thinking": true,
+          "terminal": true,
+        },
+        "enable_all_context_servers": false,
+        "context_servers": {},
+      },
+    },
+    "default_profile": "write",
+    "default_model": {
+      "provider": "openai",
+      "model": "gpt-5.1",
+    },
+    "model_parameters": [],
+  },
+  "languages": {
+    "Ruby": {
+      "tasks": {
+        "prefer_lsp": true,
+      },
+      "language_servers": ["ruby-lsp"],
+      "show_edit_predictions": true,
+    },
+  },
+  "lsp": {
+    "ruby-lsp": {
+      "binary": {
+        "path": "/Users/pkondzior/Projects/ruby-lsp/exe/ruby-lsp",
+        // "arguments": ["--debug"]
+      },
+      "initialization_options": {
+        "bypassTypechecker": true,
+        "experimentalFeaturesEnabled": true,
+        "enabledFeatures": {
+          "codeActions": true,
+          "diagnostics": true,
+          "documentHighlights": true,
+          "documentLink": true,
+          "documentSymbols": true,
+          "foldingRanges": true,
+          "formatting": false,
+          "hover": true,
+          "inlayHint": true,
+          "onTypeFormatting": true,
+          "selectionRanges": true,
+          "semanticHighlighting": true,
+          "completion": true,
+          "codeLens": true,
+          "definition": true,
+          "workspaceSymbol": true,
+          "references": true,
+        },
+      },
+    },
+    "sorbet": {
+      "binary": {
+        // "path": "/Users/pkondzior/Projects/ruby-lsp/exe/ruby-lsp-launcher"
+        "arguments": ["tc", "--lsp"],
+      },
+    },
+    "rust-analyzer": {
+      "initialization_options": {
+        "rust": {
+          "analyzerTargetDir": "target/target-rust-analyzer",
+        },
+      },
+    },
+    "rubocop": {
+      "initialization_options": {
+        "lintMode": true,
+      },
+    },
+  },
+  "edit_predictions": {
+    "provider": "copilot",
+  },
+  "collaboration_panel": {
+    "dock": "right",
+  },
   "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "buffer_font_size": 15,
   "theme": {
     "mode": "system",
-    "light": "One Light",
-    "dark": "Gruvbox Dark Hard",
+    "light": "Ayu Light",
+    "dark": "Ayu Dark",
   },
 }

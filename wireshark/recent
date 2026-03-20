@@ -59,7 +59,7 @@ gui.seconds_format: SECONDS
 
 # Zoom level.
 # A decimal number.
-gui.zoom_level: 0
+gui.zoom_level: -1
 
 # Bytes view display type.
 # One of: HEX, BITS, DEC, OCT
@@ -95,15 +95,15 @@ gui.show_bytes_show: ASCII
 
 # Main window upper (or leftmost) pane size.
 # Decimal number.
-gui.geometry_main_upper_pane: 470
+gui.geometry_main_upper_pane: 595
 
 # Main window middle pane size.
 # Decimal number.
-gui.geometry_main_lower_pane: 338
+gui.geometry_main_lower_pane: 849
 
 # Main window master splitter state.
 # Hex byte string.
-gui.geometry_main_master_split: 000000ff0000000100000002000000e3000000e300ffffffff010000000200
+gui.geometry_main_master_split: 000000ff0000000100000002000002530000015900ffffffff010000000200
 
 # Main window extra splitter state.
 # Hex byte string.
@@ -111,7 +111,7 @@ gui.geometry_main_extra_split: 000000ff0000000100000002000001730000017400fffffff
 
 # Splitter state of PacketDialog window.
 # Qt Splitter state (hex byte string).
-gui.geom.PacketDialog.splitter: 000000ff0000000100000002000000c0000000cb01ffffffff010000000200
+gui.geom.PacketDialog.splitter: 000000ff0000000100000002000001440000015601ffffffff010000000100
 
 # Packet list column pixel widths.
 # Each pair of strings consists of a column format and its pixel width.
@@ -122,11 +122,14 @@ column.width:
         %d, -1,
         %p, -1,
         %L, -1,
-        %i, 492
+        %i, 1079
 
 # Open conversation dialog tabs.
 # List of conversation names, e.g. "TCP", "IPv6".
 gui.conversation_tabs: 
+	"TCP", "IPv6",
+	"IPv4", "Ethernet",
+	"UDP"
 
 # Conversation dialog tabs columns.
 # List of conversation columns numbers.
@@ -143,6 +146,9 @@ gui.endpoint_tabs_columns:
 # For RLC stats, whether to use RLC PDUs found inside MAC frames.
 # true or false (case-insensitive).
 gui.rlc_pdus_from_mac_frames: false
+
+# Last directory navigated to in File Open dialog.
+gui.fileopen_remembered_dir: /Users/shivom/courses/4C03/Assignments/A3/
 
 # Additional Toolbars shown
 # List of additional toolbars to show.

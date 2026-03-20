@@ -46,4 +46,43 @@ return {
 		lazy = false,
 		priority = 1000,
 	},
+	{
+		"romanaverin/charleston.nvim",
+		name = "charleston",
+		priority = 1000,
+	},
+	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+	{ "rktjmp/lush.nvim" },
+	{
+		"CosecSecCot/cosec-twilight.nvim",
+		name = "cosec-twilight",
+		lazy = false,
+	},
+	{
+		"phha/zenburn.nvim",
+		dependencies = { "rktjmp/lush.nvim" },
+		name = "zenburn",
+		lazy = false,
+	},
+	{
+		"zenbones-theme/zenbones.nvim",
+		dependencies = { "rktjmp/lush.nvim" },
+		name = "zenbones",
+		lazy = false,
+	},
+	{
+		"rockyzhang24/arctic.nvim",
+		dependencies = { "rktjmp/lush.nvim" },
+		name = "arctic",
+		branch = "main",
+	},
+	{ "projekt0n/github-nvim-theme", name = "github-theme", lazy = false },
+	{
+		"slugbyte/lackluster.nvim",
+		lazy = false,
+	},
+	{
+		"nkxxll/ghostty-default-style-dark.nvim",
+		lazy = false,
+	},
 }

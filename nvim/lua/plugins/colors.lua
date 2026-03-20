@@ -9,22 +9,34 @@ return {
 			custom_highlights = {},
 			wal = false,
 		})
+		-- vim.cmd.colorscheme("catppuccin")
+		-- vim.cmd.colorscheme("cosec-twilight")
+		-- vim.cmd.colorscheme("duckbones")
+		-- vim.cmd.colorscheme("gruber-darker")
 		-- vim.cmd.colorscheme("neopywal")
 		-- vim.cmd.colorscheme("mellifluous")
 		-- vim.cmd.colorscheme("base2tone_desert_dark")
 		-- vim.cmd.colorscheme("scholar")
 		-- vim.cmd.colorscheme("flexoki")
+		-- vim.cmd.colorscheme("habamax")
+		-- vim.cmd.colorscheme("github_dark_tritanopia")
+		-- vim.cmd.colorscheme("lackluster-dark")
 		-- vim.api.nvim_set_hl(1, "Normal", { bg = "none" })
-		require("gruvbox-material").setup({
-			italics = true,
-			contrast = "medium",
-			comments = {
-				italics = true,
-			},
-		})
-		vim.cmd.colorscheme("gruvbox-material")
+		-- vim.cmd.colorscheme("nordbones")
+		-- require("gruvbox-material").setup({
+		-- vim.cmd.colorscheme("ghostty-default-style-dark")
+		-- 	italics = true,
+		-- 	contrast = "soft",
+		-- 	comments = {
+		-- 		italics = true,
+		-- 	},
+		-- 	dark = false,
+		-- })
+		-- vim.cmd.colorscheme("gruvbox-material")
+		-- vim.cmd.colorscheme("orng")
+		-- vim.cmd.colorscheme("charleston")
 		-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-		vim.o.background = "dark"
+		-- vim.o.background = "dark"
 	end,
 	-- require("vague").setup({
 	--     transparent = true
@@ -45,7 +57,6 @@ return {
 --         -- color = color or 'miasma'
 --         -- color = color or "nord"
 --         -- color = color or "dracula"
---         -- color = color or "catppuccin"
 --         -- color = color or "gruvbox"
 --         -- color = color or "fahrenheit"
 --         -- color = color or "vague"
