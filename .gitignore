@@ -11,6 +11,15 @@ eote/log
 opencode/node_modules/
 opencode/package*.json
 
+# Bloat — generated/vendored, never track
+raycast/
+spicetify/Themes/*/screenshots/
+spicetify/Themes/*/images/
+*.js.map
+opencode/skills/
+opencode/plugins/
+zed/prompts/prompts-library-db.*
+
 # Backups / scratch
 *.bak
 *.bak.*
