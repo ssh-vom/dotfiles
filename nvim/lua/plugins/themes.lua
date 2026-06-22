@@ -51,7 +51,18 @@ return {
 		name = "charleston",
 		priority = 1000,
 	},
-	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+	{
+		"folke/tokyonight.nvim",
+		name = "tokyonight",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("tokyonight").setup({
+				style = "night",
+			})
+			vim.cmd.colorscheme("tokyonight-night")
+		end,
+	},
 	{ "rktjmp/lush.nvim" },
 	{
 		"CosecSecCot/cosec-twilight.nvim",
@@ -85,4 +96,10 @@ return {
 		"nkxxll/ghostty-default-style-dark.nvim",
 		lazy = false,
 	},
+	{
+		"RRethy/nvim-base16",
+		lazy = false,
+	},
+	{ "nyoom-engineering/oxocarbon.nvim", lazy = false },
+	{ "Mofiqul/dracula.nvim", lazy = false },
 }

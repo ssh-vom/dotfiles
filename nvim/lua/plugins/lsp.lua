@@ -9,7 +9,7 @@ return {
 		dependencies = { "mason.nvim" },
 		event = { "BufReadPre", "BufNewFile" },
 		opts = {
-			ensure_installed = { "lua_ls", "basedpyright", "ruff", "matlab_ls" },
+			ensure_installed = { "lua_ls", "ty", "ruff", "matlab_ls" },
 		},
 	},
 	{
@@ -133,25 +133,9 @@ return {
 				capabilities = capabilities,
 			})
 
-			-- Python: basedpyright
-			vim.lsp.config("basedpyright", {
+			-- Python: ty
+			vim.lsp.config("ty", {
 				capabilities = capabilities,
-				settings = {
-					basedpyright = {
-						analysis = {
-							autoImportCompletions = false,
-							indexing = { enabled = false },
-							useLibraryCodeForTypes = true,
-							diagnosticMode = "openFilesOnly",
-							inlayHints = {
-								callArgumentNames = true,
-								functionReturnTypes = true,
-								variableTypes = true,
-							},
-							typeCheckingMode = "recommended",
-						},
-					},
-				},
 			})
 
 			vim.lsp.config("ruff", {

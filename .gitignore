@@ -1,0 +1,17 @@
+# Secrets / credentials — never commit
+traces/
+gh/
+github-copilot/
+configstore/
+devin/
+hunk/state.json
+herdr/*session*.json
+herdr/*.log
+eote/log
+opencode/node_modules/
+opencode/package*.json
+
+# Backups / scratch
+*.bak
+*.bak.*
+*.log

@@ -19,9 +19,9 @@ config.background = {
 		vertical_offset = offset_y
 	}
 }
--- For example, changing the color scheme:
-
-
+-- TokyoNight Night colors. In WezTerm this built-in scheme uses the
+-- night background (#1a1b26), while "Tokyo Night Storm" is the storm variant.
+config.color_scheme = 'Tokyo Night'
 
 -- and finally, return the configuration to wezterm
 return config

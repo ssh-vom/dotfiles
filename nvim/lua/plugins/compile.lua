@@ -16,7 +16,7 @@ return {
 		---@type CompileModeOpts
 		vim.g.compile_mode = {
 			default_command = {
-				python = "python %",
+				python = "python3 %",
 				lua = "lua %",
 				javascript = "bun %",
 				typescript = "bun %",
@@ -33,9 +33,27 @@ return {
 			-- to add ANSI escape code support, add:
 			-- baleia_setup = true,
 
-			-- to make `:Compile` replace special characters (e.g. `%`) in
-			-- the command (and behave more like `:!`), add:
-			-- bang_expansion = true,
+			-- make `:Compile` replace special characters like `%`
+			bang_expansion = true,
 		}
+
+		vim.api.nvim_create_user_command("CompileBelow", function(opts)
+			vim.cmd({
+				cmd = "Compile",
+				args = opts.fargs,
+				bang = opts.bang,
+				mods = { split = "belowright" },
+			})
+		end, {
+			nargs = "?",
+			bang = true,
+			complete = function(_, cmdline)
+				local cmd = cmdline:gsub("CompileBelow%s+", "")
+				return vim.fn.getcompletion(("!%s"):format(cmd), "cmdline")
+			end,
+			desc = "Run :Compile in a split below",
+		})
+
+		vim.keymap.set("n", "<leader>r", "<cmd>CompileBelow<CR>", { desc = "Compile below" })
 	end,
 }

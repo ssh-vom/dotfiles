@@ -23,10 +23,10 @@ size = 30.0
 # style = "Regular"
 #
 # ─────────────────────────────
-# 🖌️ Colors (Tokyo Night Storm inspired)
+# 🖌️ Colors (TokyoNight Night)
 # ─────────────────────────────
 [colors.primary]
-background = "0x000000"
+background = "0x1a1b26"
 foreground = "0xc0caf5"
 
 

@@ -1,1 +1,6 @@
+theme = TokyoNight Night
 background-opacity = 1.00
+
+# Make Cmd+X behave like a terminal "cut" in TUIs/shell prompts.
+# Sends Ctrl+U (0x15), which pi's chat editor handles as delete/kill to start of line.
+keybind = cmd+x=text:\x15

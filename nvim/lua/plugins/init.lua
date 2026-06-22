@@ -81,7 +81,6 @@ return {
     },
     { 'ThePrimeagen/vim-be-good' },
     { "xero/miasma.nvim" },
-    { 'RRethy/nvim-base16' },
     -- {
     --     'augmentcode/augment.vim',
     --     config = function()

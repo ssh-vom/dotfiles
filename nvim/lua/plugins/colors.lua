@@ -1,14 +1,15 @@
 return {
-	"RedsXDD/neopywal.nvim",
+	"folke/tokyonight.nvim",
+	name = "tokyonight",
 	lazy = false,
 	priority = 1000,
 	config = function()
-		require("neopywal").setup({
-			transparent_background = false,
-			custom_colors = {},
-			custom_highlights = {},
-			wal = false,
-		})
+		-- require("neopywal").setup({
+		-- 	transparent_background = false,
+		-- 	custom_colors = {},
+		-- 	custom_highlights = {},
+		-- 	wal = false,
+		-- })
 		-- vim.cmd.colorscheme("catppuccin")
 		-- vim.cmd.colorscheme("cosec-twilight")
 		-- vim.cmd.colorscheme("duckbones")
@@ -21,7 +22,6 @@ return {
 		-- vim.cmd.colorscheme("habamax")
 		-- vim.cmd.colorscheme("github_dark_tritanopia")
 		-- vim.cmd.colorscheme("lackluster-dark")
-		-- vim.api.nvim_set_hl(1, "Normal", { bg = "none" })
 		-- vim.cmd.colorscheme("nordbones")
 		-- require("gruvbox-material").setup({
 		-- vim.cmd.colorscheme("ghostty-default-style-dark")
@@ -35,8 +35,12 @@ return {
 		-- vim.cmd.colorscheme("gruvbox-material")
 		-- vim.cmd.colorscheme("orng")
 		-- vim.cmd.colorscheme("charleston")
-		-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-		-- vim.o.background = "dark"
+		require("tokyonight").setup({
+			style = "night",
+			transparent = false,
+		})
+		vim.o.background = "dark"
+		vim.cmd.colorscheme("tokyonight-night")
 	end,
 	-- require("vague").setup({
 	--     transparent = true
